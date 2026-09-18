@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 36</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 36 de 37</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Qual é a principal função do JavaScript no desenvolvimento Front-End?</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span> Criar e gerenciar o banco de dados da aplicação.</button>
+<button class="answer-btn btn-azul" onclick="responder('certa')"><span class="answer-shape">◆</span>Adicionar interatividade e comportamentos dinâmicos às páginas web.</button>
+<button class="answer-btn btn-amarelo" onclick="responder('errada')"><span class="answer-shape">●</span>Definir exclusivamente as cores, fontes e estilos da página.</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>Hospedar o site em um servidor web.</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina37.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao36.html';
+}
+}
+</script>
+</body>
+</html>

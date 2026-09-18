@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pergunta 36</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-kahoot">
+<div class="top-bar">
+<span class="badge-pergunta">Pergunta 37 de 42</span>
+<span class="badge-pergunta">⏱️ Frontend</span>
+</div>
+<div class="progress-track">
+<div class="progress-fill" style="width:20%;"></div>
+</div>
+<div class="card-kahoot">
+<h2 class="pergunta-titulo">Como o fato de o JavaScript ser uma linguagem de tipagem dinâmica impacta o desenvolvimento da ferramenta, especialmente em relação à flexibilidade, identificação de erros e manutenção do código?</h2>
+<div class="answers-grid">
+<button class="answer-btn btn-vermelho" onclick="responder('errada')"><span class="answer-shape">▲</span>  A tipagem dinâmica permite maior flexibilidade, mas pode fazer com que alguns erros de tipo sejam identificados apenas durante a execução, exigindo mais atenção na manutenção do código.</button>
+<button class="answer-btn btn-azul" onclick="responder('certa')"><span class="answer-shape">◆</span>A tipagem dinâmica impede que variáveis mudem de tipo durante a execução, tornando o código mais rígido e previsível.</button>
+<button class="answer-btn btn-amarelo" onclick="responder('errada')"><span class="answer-shape">●</span>Como JavaScript possui tipagem dinâmica, todos os erros relacionados a tipos são identificados automaticamente antes da execução da ferramenta.
+
+</button>
+<button class="answer-btn btn-verde" onclick="responder('errada')"><span class="answer-shape">■</span>A tipagem dinâmica elimina a necessidade de testes, pois o JavaScript garante que os tipos utilizados sejam sempre compatíveis.</button>
+</div>
+</div>
+</div>
+<script>
+function responder(tipo){
+if(tipo === 'certa'){
+window.location.href = 'pagina42.html';
+} else {
+var atual = parseInt(localStorage.getItem('erros') || '0');
+localStorage.setItem('erros', atual + 1);
+window.location.href = 'explicacao37.html';
+}
+}
+</script>
+</body>
+</html>
